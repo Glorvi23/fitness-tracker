@@ -20,7 +20,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useCreateIndex: true
 });
 
-
+// routes
+// app.get("/api/workouts", (req, res) => {
+//     Workout.find({}).then((workout) => {
+//         console.log(workout);
+//         res.json(workout);
+//     });
+// });
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
