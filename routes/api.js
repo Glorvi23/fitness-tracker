@@ -10,6 +10,13 @@ Router.get("/api/workouts", (req, res) => {
     });
 });
 
+Router.post("/api/workouts/", (req, res) => {
+    Workout.create(req.body).then((workout) => {
+        res.json(workout);
+    }).catch(err => {
+        res.status(400).json(err);
+    });
+});
 
 
 
