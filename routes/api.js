@@ -18,6 +18,28 @@ Router.post("/api/workouts/", (req, res) => {
     });
 });
 
+Router.put("/api/workouts/", (req, res) => {
+    Workout.update(
+        {
+            _id: mongojs.ObjectId(params.id)
+        },
+        {
+            $set: {
+                read: true
+            }
+        },
+
+        (error, edited) => {
+            if(error) {
+                console.log(error);
+                res.send(error);
+            }else{
+                console.log(edited);
+                res.send(edited);
+            }
+        }
+    );
+});
 
 
 module.exports = Router;
