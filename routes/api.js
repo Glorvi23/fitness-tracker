@@ -1,5 +1,6 @@
 const express = require("express");
 const Workout = require("../models/Workout");
+const mongojs = require("mongojs");
 // const { model } = require("../models/workout");
 const Router = express.Router();
 
@@ -18,22 +19,29 @@ Router.post("/api/workouts/", (req, res) => {
     });
 });
 
-Router.put("/api/workouts/", (req, res) => {
-    Workout.update(
-        {
-            _id: mongojs.ObjectId(params.id)
-        },
-        {
+Router.put("/api/workouts/:id", (req, res) => {
+    Workout.findByIdAndUpdate({
+            _id: mongojs.ObjectId(req.params.id)
+        }, {
             $set: {
-                read: true
+                day: req.body.day,
+                exercises: [{
+                    type: req.body.type,
+                    name: req.body.name,
+                    duration: req.body.duration,
+                    weight: req.body.weight,
+                    reps: req.body.reps,
+                    sets: req.body.sets,
+                    distance: req.body.distance
+                }]
             }
         },
 
         (error, edited) => {
-            if(error) {
+            if (error) {
                 console.log(error);
                 res.send(error);
-            }else{
+            } else {
                 console.log(edited);
                 res.send(edited);
             }
