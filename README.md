@@ -11,12 +11,9 @@ The goal is for this is to able to add a workout and then be able to come back l
 ## Installation
 You need to first install vscode, create a github account, and download git bash for windows. Run “git clone” in git bash to initialize the repository on your computer. Finally, cd into the repository and type “code .” to open it in vscode.
 ## Usage
-![note-taker](public/assets/images/fitness-tracker.png)
+![fitness-tracker](public/assets/images/fitness-tracker.png)
 
 [Click here to view the site.](https://radiant-hollows-14835.herokuapp.com/)  
-## Credits
-The following people/sites helped contribute to the project.
-- [Markdown License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 ## License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 MIT License
@@ -25,4 +22,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Commit
-We are not accepting any changes at this time.
+No changes are being accepted at this time.
