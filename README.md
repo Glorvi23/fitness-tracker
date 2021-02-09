@@ -12,6 +12,8 @@ The goal is for this is to able to add a workout and then be able to come back l
 You need to first install vscode, create a github account, and download git bash for windows. Run “git clone” in git bash to initialize the repository on your computer. Finally, cd into the repository and type “code .” to open it in vscode.
 ## Usage
 ![note-taker](public/assets/images/fitness-tracker.png)
+
+[Click here to view the site.](https://radiant-hollows-14835.herokuapp.com/)  
 ## Credits
 The following people/sites helped contribute to the project.
 - [Markdown License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
