@@ -9,19 +9,36 @@ const Router = express.Router();
 
 Router.get("/api/workouts", (req, res) => {
     Workout.find({}).then((workout) => {
-        console.log(workout);
+        // console.log(workout);
         res.json(workout);
+    });
+});
+
+Router.get("/exercise", (req, res) => {
+
+    console.log("Exercise");
+    res.sendFile("exercise.html", {
+        root: "./public"
+    });
+});
+
+Router.get("/stats", (req, res) => {
+
+    console.log("Exercise");
+    res.sendFile("stats.html", {
+        root: "./public"
     });
 });
 
 Router.get("/api/workouts/range?", (req, res) => {
     Workout.find({}).then((workout) => {
-        console.log(workout);
+        // console.log(workout);
         res.json(workout);
     });
 });
 
 Router.post("/api/workouts/", (req, res) => {
+    // console.log(`req.body`, req.body);
     Workout.create(req.body).then((workout) => {
         res.json(workout);
     }).catch(err => {
@@ -30,11 +47,14 @@ Router.post("/api/workouts/", (req, res) => {
 });
 
 Router.put("/api/workouts/:id", (req, res) => {
+    console.log(`duration: `, req.body.duration);
+
+    console.log(`req.body`, req.body);
     Workout.findByIdAndUpdate({
             _id: mongojs.ObjectId(req.params.id)
         }, {
             $set: {
-                day: req.body.day,
+                day: new Date(),
                 exercises: [{
                     type: req.body.type,
                     name: req.body.name,
@@ -52,11 +72,13 @@ Router.put("/api/workouts/:id", (req, res) => {
                 console.log(error);
                 res.send(error);
             } else {
-                console.log(edited);
+                // console.log(edited);
                 res.send(edited);
             }
         }
     );
+    console.log(`duration: `, req.body.duration);
+
 });
 
 
